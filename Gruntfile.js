@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          '<%= config.temp %>/main.css': '<%= config.source %>/assets/scss/main.scss',
+          '<%= config.temp %>/main.css': '<%= config.source %>/scss/main.scss',
         }
       },
     },
@@ -98,8 +98,8 @@ module.exports = function(grunt) {
       main: {
         files: [{
           src: [
-            "<%= config.source %>/assets/js/main/*.js",
-            "<%= config.source %>/assets/js/main.js"
+            "<%= config.source %>/js/main/*.js",
+            "<%= config.source %>/js/main.js"
           ],
           dest: "<%= config.temp %>/script.min.js"
         }]
@@ -143,8 +143,8 @@ module.exports = function(grunt) {
     watch: {
       images: {
         files: [
-          '<%= config.source %>/assets/{favicons,icons,img,video,pdf}/*',
-          '<%= config.source %>/assets/{favicons,icons,img,video,pdf}/**/*'
+          '<%= config.source %>/assets/*',
+          '<%= config.source %>/assets/**/*'
         ],
         tasks: ['copy:assets']
       },
