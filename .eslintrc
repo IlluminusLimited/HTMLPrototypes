@@ -1,0 +1,35 @@
+---
+parser: esprima
+env:
+  browser: true,
+  jquery: true
+settings:
+  ecmascript: 6
+plugins: []
+
+# "off" or 0 - turn the rule off
+# "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+# "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+# usually preferring warn because error can halt the build process and trips up rapid feedback
+extends: "eslint:recommended"
+rules: # http://eslint.org/docs/rules/
+  camelcase: warn
+  curly:
+    - warn
+    - all
+  indent:
+    - warn
+    - 2
+  no-console:
+    # console.error and console.warn are ok, but let's
+    # keep console.log out of production code.
+    - warn
+    - allow:
+      - warn
+      - error
+  no-mixed-spaces-and-tabs:
+    - warn
+    - smart-tabs
+  no-trailing-spaces: warn
+  no-underscore-dangle: warn
+  semi: warn
