@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.959 22.688">
+  <style>.lines{fill:#03d6be}</style>
+
+  <path class="lines" d="M18.59 10.817V5.954H0V4.869h18.59V0l9.369 5.412z"/>
+  <g transform="translate(0 11.87)">
+    <path class="lines" d="M27.959 190.869v1.085H9.369v4.863L0 191.412 9.369 186v4.869z" transform="translate(0 -186)"/>
+  </g>
+</svg>
