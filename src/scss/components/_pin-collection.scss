@@ -1,0 +1,19 @@
+.pin-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $gutter;
+}
+
+.pin-list-item {
+  position: relative;
+}
+
+// .pin-list-img {}
+.pin-list-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($white, 0.85);
+  padding: 5px;
+}
