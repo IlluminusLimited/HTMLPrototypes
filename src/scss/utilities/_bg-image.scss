@@ -21,4 +21,8 @@
 
   &.no-extend-left::after { left: 0; }
   &.no-extend-right::after { right: 0; }
+
+  &.login-bg::after {
+    background-image: url('/img/landing-image.png');
+  }
 }

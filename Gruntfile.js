@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     config: {
-      source: 'site',
+      source: 'src',
       dest: 'dist',
       temp: '.tmp'
     },
@@ -120,11 +120,11 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         assets: '<%= config.dest %>',
-        data: '<%= config.source %>/data/*',
+        data: '<%= config.source %>/site/data/*',
         flatten: true,
         layout: 'default.hbs',
-        layoutdir: '<%= config.source %>/layouts',
-        partials: '<%= config.source %>/{partials,content}/**/*.hbs',
+        layoutdir: '<%= config.source %>/site/layouts',
+        partials: '<%= config.source %>/site/{partials,content}/**/*.hbs',
       },
 
       build: {
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.source %>/pages/',
+          cwd: '<%= config.source %>/site/pages/',
           src: ['**/*.hbs'],
           dest: '<%= config.dest %>/'
         }]
@@ -158,10 +158,10 @@ module.exports = function(grunt) {
       },
       assemble: {
         files: [
-          '<%= config.source %>/**/**/*.hbs',
-          '<%= config.source %>/**/*.hbs',
-          '<%= config.source %>/data/*',
-          '<%= config.source %>/content/**/*.md',
+          '<%= config.source %>/site/**/**/*.hbs',
+          '<%= config.source %>/site/**/*.hbs',
+          '<%= config.source %>/site/data/*',
+          '<%= config.source %>/site/content/**/*.md',
         ],
         tasks: ['assemble']
       }
@@ -189,7 +189,7 @@ module.exports = function(grunt) {
     concurrent: {
       scssWatch: ['sasslint', 'buildScss'],
       jsWatch:   ['eslint',   'buildJs'],
-      build:  ['buildJs',  'buildScss', 'assemble'],
+      build:     ['buildJs',  'buildScss', 'assemble'],
     }
 
   });
