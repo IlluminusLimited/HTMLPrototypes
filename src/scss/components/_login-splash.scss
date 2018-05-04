@@ -26,15 +26,22 @@
   > * {
     flex: 0 0 auto;
     margin: $gutter auto;
+    // max-width: 33vw;
   }
 
-  h1 {
-    margin: 0;
-  }
+  h1 { margin: 0 auto; }
 
   .raccoon {
     margin: auto auto 0;
     width: 35%;
     height: auto;
+  }
+}
+
+@media screen and (min-width: $screen-tablet) {
+  .login-splash {
+    > * { max-width: 33vw; }
+
+    .raccoon { max-width: 250px; }
   }
 }
