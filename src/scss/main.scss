@@ -30,6 +30,7 @@
 @import 'elements/article';
 @import 'elements/typography';
 @import 'elements/img';
+@import 'elements/svg';
 @import 'elements/video';
 @import 'elements/lists';
 @import 'elements/links';
@@ -41,6 +42,8 @@
 //     specific UI components. This is where majority of our work takes place
 //     and our UI components are often composed of Objects and Components
 @import 'components/main-nav';
+@import 'components/footer-nav';
+@import 'components/nav-icon';
 @import 'components/sub-nav';
 @import 'components/login-splash';
 @import 'components/auth-link';
