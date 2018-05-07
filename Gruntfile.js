@@ -149,11 +149,11 @@ module.exports = function(grunt) {
         tasks: ['copy:assets']
       },
       scss: {
-        files: '<%= config.source %>/**/*.scss',
+        files: '<%= config.source %>/scss/**/*.scss',
         tasks: ['concurrent:scssWatch']
       },
       js: {
-        files: '<%= config.source %>/**/*.{json,js}',
+        files: '<%= config.source %>/js/**/*.{json,js}',
         tasks: ['concurrent:jsWatch']
       },
       assemble: {
@@ -198,7 +198,7 @@ module.exports = function(grunt) {
   grunt.registerTask('lint',      ['sasslint',    'eslint']);
   grunt.registerTask('preBuild',  ['clean:build', 'copy']);
   grunt.registerTask('buildJs',   ['uglify', 'concat:js']);
-  grunt.registerTask('buildScss', ['sass', 'postcss', 'concat:css', 'concat']);
+  grunt.registerTask('buildScss', ['sass', 'postcss', 'concat:css']);
 
   grunt.registerTask('serve',     ['lint',  'build', 'browserSync', 'watch']);
   grunt.registerTask('build',     ['preBuild', 'concurrent']);
