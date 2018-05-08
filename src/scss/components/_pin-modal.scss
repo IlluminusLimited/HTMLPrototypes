@@ -10,16 +10,14 @@
   &.active { display: block; }
 }
 
-.pin-modal-toggle {
-  cursor: pointer;
-}
+.pin-modal-toggle { cursor: pointer; }
 
 .pin-modal {
   display: none;
   position: fixed;
-  top: 50px;
-  right: 50px;
-  left: 50px;
+  top: $gutter;
+  right: $gutter;
+  left: $gutter;
   z-index: 1;
   background-color: $white;
   max-height: calc(100vh - 50px);
@@ -28,19 +26,28 @@
   &.active { display: block; }
 }
 
+.pin-modal-dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: rgba($white, 0.75);
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
+  appearance: none;
+}
+
 .pin-modal-container {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
 
-  > * {
-    flex: 1 1 auto;
-  }
+  > * { flex: 1 1 auto; }
 }
 
 .pin-modal-img {
-  width: calc(100% - 30px);
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -66,14 +73,24 @@
 }
 
 .pin-modal-thumbs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
 
   .pin-modal-img {
-    width: 100%;
-    height: 60px;
+    flex: 0 0 auto;
+    margin: 0 8px 8px 0;
+    width: calc(25% - 8px);
+    min-width: 80px;
+    height: 80px;
     overflow: hidden;
+  }
+}
+
+body:not(.is-touch) {
+  .pin-modal-dismiss {
+    &:hover {
+      background-color: $white;
+    }
   }
 }
 
@@ -82,7 +99,14 @@
     flex-direction: row;
   }
 
-  .pin-modal-img {
+  .pin-modal {
+    top: 10%;
+    right: 50px;
+    left: 50px;
+  }
+
+  .pin-modal-viewer {
+    align-self: stretch;
     width: 60%;
   }
 

@@ -7,7 +7,9 @@
 
     <div id="pin-{{this.id}}" class="pin-modal" aria-hidden="true" aria-labelledby="title-{{this.id}}" role="dialog">
       <div class="pin-modal-container" role="document">
-        <img class="pin-modal-img" src="{{@root.assets}}/img/fpo-pins/{{this.img}}" alt="{{this.description}}" />
+        <div class="pin-modal-viewer">
+          <img class="pin-modal-img" src="{{@root.assets}}/img/fpo-pins/{{this.img}}" alt="{{this.description}}" />
+        </div>
         <div class="pin-modal-content">
           <h1 id="title-{{this.id}}">{{this.name}}</h1>
           <p>{{this.description}}</p>
@@ -19,6 +21,7 @@
             {{/each}}
           </div>
           <div class="pin-modal-thumbs">
+            <img class="pin-modal-img" src="{{@root.assets}}/img/fpo-pins/{{this.img}}" alt="{{this.description}}" />
             <img class="pin-modal-img" src="//via.placeholder.com/350x250/3ebeae/ffffff" alt="" />
             <img class="pin-modal-img" src="//via.placeholder.com/250x350/fdba1b/ffffff" alt="" />
             <img class="pin-modal-img" src="//via.placeholder.com/450x250/e86359/ffffff" alt="" />
@@ -26,6 +29,9 @@
           </div>
         </div>
       </div>
+      <button class="pin-modal-dismiss">
+        {{> svg-close }}
+      </button>
     </div>
   {{/each}}
 </div>

@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
+  document.querySelectorAll('.pin-modal-dismiss').forEach(function(dismiss){
+    dismiss.addEventListener('click', function(){
+      this.closest('.pin-modal.active').classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  });
+
   document.querySelectorAll('.pin-modal-toggle').forEach(function(toggle){
     toggle.addEventListener('click', function(){
       var modal = document.querySelector("#"+toggle.getAttribute('data-modal'));
