@@ -113,6 +113,11 @@ module.exports = function(grunt) {
           cwd: '<%= config.source %>/assets/',
           src: ['{fonts,img,favicons,icons,vendor,video,pdf}/**/*'],
           dest: '<%= config.dest %>/'
+        },{
+          expand: true,
+          cwd: '<%= config.source %>',
+          src: ['robots.txt'],
+          dest: '<%= config.dest %>/'
         }]
       }
     },
