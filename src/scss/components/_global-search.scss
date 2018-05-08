@@ -10,30 +10,34 @@
   display: flex;
   align-items: center;
 
-  [type="submit"] {
-    flex: 0 0 auto;
-    border: 1px solid transparent;
+  [type="submit"],
+  [type="search"] {
+    border: 1px solid $gray-light;
+    border-radius: 0;
+    box-shadow: none;
     background: $white;
-    padding-top: 2px;
     width: auto;
     height: 2.225em;
+    appearance: none;
 
     &:focus {
       outline: none;
-      border: 1px solid $white;
-      background: $turquoise;
+    }
+  }
 
+  [type="submit"] {
+    flex: 0 0 auto;
+    border-right-width: 0;
+    padding: 4px 8px 5px;
+
+    &:focus {
+      border-color: $white;
+      background: $turquoise;
       svg { fill: $white; }
     }
   }
 
   [type="search"] {
     flex: 1 1 auto;
-    border: 1px solid $white;
-    width: auto;
-
-    &:focus {
-      outline: none;
-    }
   }
 }
