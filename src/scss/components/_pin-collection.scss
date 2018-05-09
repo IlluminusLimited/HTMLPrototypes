@@ -5,28 +5,6 @@
   grid-gap: $gutter;
 }
 
-.pin-list-item {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pin-list-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.pin-list-title {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba($white, 0.85);
-  padding: 5px;
-}
-
 @media screen and (min-width: $screen-phone-lg) {
   .pin-collection {
     grid-template-columns: 1fr 1fr 1fr;

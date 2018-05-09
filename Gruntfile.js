@@ -130,6 +130,9 @@ module.exports = function(grunt) {
         layout: 'default.hbs',
         layoutdir: '<%= config.source %>/site/layouts',
         partials: '<%= config.source %>/site/{partials,content}/**/*.hbs',
+        marked: {
+          breaks: false,
+        },
       },
 
       build: {

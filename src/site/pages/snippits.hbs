@@ -1,0 +1,49 @@
+---
+title: component samples
+---
+{{#markdown}}
+# {{title}}
+Just a page to show off various components.
+
+-------
+
+You can round pin list items by adding the class `.pin-round`.
+
+They will have a default border color of `$yellow`, but you can change that with the border helper classes:
+- `.border-turquoise`
+- `.border-purple`
+- `.border-salmon`
+- `.border-yellow`
+{{/markdown}}
+
+<div class="sample-fodder">
+<style>
+  .sample-fodder > * {
+    float: left;
+    margin: 15px;
+    width: 150px;
+  }
+</style>
+
+<div class="pin-list-item pin-round">
+  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+  <div class="pin-list-title">Dragon</div>
+</div>
+
+<div class="pin-list-item pin-round border-turquoise">
+  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+  <div class="pin-list-title">Denver</div>
+</div>
+
+<div class="pin-list-item pin-round border-salmon">
+  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+  <div class="pin-list-title">DIVA</div>
+</div>
+
+<div class="pin-list-item pin-round border-purple">
+  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
+  <div class="pin-list-title">wgms</div>
+</div>
+
+
+</div>
