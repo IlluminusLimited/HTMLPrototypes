@@ -1,6 +1,14 @@
 ---
 title: component samples
 ---
+<style>
+  .sample-pin-fodder > * {
+    float: left;
+    margin: 15px;
+    width: 150px;
+  }
+</style>
+
 {{#markdown}}
 # {{title}}
 Just a page to show off various components.
@@ -16,34 +24,35 @@ They will have a default border color of `$yellow`, but you can change that with
 - `.border-yellow`
 {{/markdown}}
 
-<div class="sample-fodder">
-<style>
-  .sample-fodder > * {
-    float: left;
-    margin: 15px;
-    width: 150px;
-  }
-</style>
+<div class="sample-pin-fodder">
 
-<div class="pin-list-item pin-round">
-  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
-  <div class="pin-list-title">Dragon</div>
+  <div class="pin-list-item pin-round">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <div class="pin-list-title">Dragon</div>
+  </div>
+
+  <div class="pin-list-item pin-round border-turquoise">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <div class="pin-list-title">Denver</div>
+  </div>
+
+  <div class="pin-list-item pin-round border-salmon">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <div class="pin-list-title">DIVA</div>
+  </div>
+
+  <div class="pin-list-item pin-round border-purple">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
+    <div class="pin-list-title">wgms</div>
+  </div>
 </div>
 
-<div class="pin-list-item pin-round border-turquoise">
-  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
-  <div class="pin-list-title">Denver</div>
-</div>
+<spacer style="height: 3em;"></spacer>
+{{#markdown}}
+Add the class `.with-divider` to any heading to create.. dividers
+{{/markdown}}
 
-<div class="pin-list-item pin-round border-salmon">
-  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
-  <div class="pin-list-title">DIVA</div>
-</div>
-
-<div class="pin-list-item pin-round border-purple">
-  <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
-  <div class="pin-list-title">wgms</div>
-</div>
-
-
-</div>
+<section>
+  <h2 class="with-divider copy-turquoise">This is a Heading</h2>
+  <div class="with-divider">a div as a heading</div>
+</section>
