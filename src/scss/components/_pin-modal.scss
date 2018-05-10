@@ -21,7 +21,7 @@
   z-index: 1;
   background-color: $white;
   max-height: calc(100vh - 50px);
-  overflow: scroll;
+  overflow: auto;
 
   &.active { display: block; }
 }

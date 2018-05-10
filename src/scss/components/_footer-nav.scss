@@ -13,7 +13,7 @@
   background-color: $white;
   padding: 0;
   height: 67px;
-  overflow: scroll;
+  overflow: auto;
 
   > * { flex: 1 1 auto; }
 }
