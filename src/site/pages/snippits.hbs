@@ -12,19 +12,10 @@ layout: large-header.hbs
 
 {{#markdown}}
 # {{title}}
-Just a page to show off various components.
-
--------
+Just a page to show off various components and styles.
 
 You can round pin list items by adding the class `.pin-round`.
-
-They will have a default border color of `$yellow`, but you can change that with the border helper classes:
-- `.border-turquoise`
-- `.border-purple`
-- `.border-salmon`
-- `.border-yellow`
 {{/markdown}}
-
 <div class="sample-pin-fodder">
 
   <div class="pin-list-item pin-round">
@@ -47,6 +38,65 @@ They will have a default border color of `$yellow`, but you can change that with
     <div class="pin-list-title">wgms</div>
   </div>
 </div>
+{{#markdown}}
+They will have a default border color of `$yellow`, but you can change that with the border helper classes:
+- `.border-turquoise`
+- `.border-purple`
+- `.border-salmon`
+- `.border-yellow`
+{{/markdown}}
+
+
+{{#markdown}}
+pin stacks can be used to show multiple images in a single "thumbnail"
+* will only show the first 4 images
+* can handle any of the pin-list-item modifiers
+{{/markdown}}
+<div class="sample-pin-fodder">
+  <div class="pin-list-item pin-stack">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
+    <div class="pin-list-title">A Full Set!</div>
+  </div>
+
+  <div class="pin-list-item pin-stack">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <div class="pin-list-title">Only Three</div>
+  </div>
+
+  <div class="pin-list-item pin-stack">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <div class="pin-list-title">Only Two</div>
+  </div>
+
+  <div class="pin-list-item pin-stack">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <div class="pin-list-title">Only One</div>
+  </div>
+
+  <div class="pin-list-item pin-stack">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <div class="pin-list-title">more than 4</div>
+  </div>
+
+  <div class="pin-list-item pin-stack pin-round border-purple">
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/dragons.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/denver.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/diva-4.jpg" alt="" />
+    <img class="pin-list-img" src="{{@root.assets}}/img/fpo-pins/wgms.jpg" alt="" />
+    <div class="pin-list-title">And Rounded!</div>
+  </div>
+</div>
+
 
 <spacer style="height: 3em;"></spacer>
 {{#markdown}}
