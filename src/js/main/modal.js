@@ -25,4 +25,18 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
+  document.querySelectorAll('.pin-modal-thumbs .pin-modal-img').forEach(function(img){
+    img.addEventListener('click', function(){
+      var viewer = img.closest(".pin-modal-container ").querySelector(".pin-modal-viewer");
+      viewer.querySelector("img").remove();
+      viewer.append(img.cloneNode());
+
+      img.parentNode.querySelectorAll(".pin-modal-img").forEach(function(elem){
+        elem.classList.remove('active');
+      });
+      img.classList.add('active');
+    });
+  });
+
+
 });
