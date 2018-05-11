@@ -1,32 +1,60 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  margin: 0 auto;
+  width: 83vw;
 
-  > * { grid-column: 2 / -2; }
-
-  > .full-bleed { grid-column: 1 / -1; }
+  > .full-bleed { width: 100%; }
 }
 
 @media screen and (min-width: #{$screen-tablet}) {
-  .container {
-    grid-template-columns: 1fr $container-tablet 1fr;
-  }
+  .container { width: $container-tablet * 0.83; }
 }
 
 @media screen and (min-width: #{$screen-tablet-lg}) {
-  .container {
-    grid-template-columns: 1fr $container-tablet-lg 1fr;
-  }
+  .container { width: $container-tablet-lg * 0.83; }
 }
 
 @media screen and (min-width: #{$screen-desktop}) {
-  .container {
-    grid-template-columns: 1fr $container-desktop 1fr;
-  }
+  .container { width: $container-desktop * 0.83; }
 }
 
 @media screen and (min-width: #{$screen-desktop-lg}) {
+  .container { width: $container-desktop-lg * 0.83; }
+}
+
+
+@supports (display: grid) {
   .container {
-    grid-template-columns: 1fr $container-desktop-lg 1fr;
+    display: grid;
+    margin: auto;
+    width: auto;
+    grid-template-columns: 1fr 10fr 1fr;
+
+    > * { grid-column: 2 / -2; }
+
+    > .full-bleed { grid-column: 1 / -1; }
+  }
+
+  @media screen and (min-width: #{$screen-tablet}) {
+    .container {
+      grid-template-columns: 1fr $container-tablet 1fr;
+    }
+  }
+
+  @media screen and (min-width: #{$screen-tablet-lg}) {
+    .container {
+      grid-template-columns: 1fr $container-tablet-lg 1fr;
+    }
+  }
+
+  @media screen and (min-width: #{$screen-desktop}) {
+    .container {
+      grid-template-columns: 1fr $container-desktop 1fr;
+    }
+  }
+
+  @media screen and (min-width: #{$screen-desktop-lg}) {
+    .container {
+      grid-template-columns: 1fr $container-desktop-lg 1fr;
+    }
   }
 }
