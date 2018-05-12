@@ -19,7 +19,7 @@
 
 @media screen and (min-width: $screen-tablet) {
   .pin-modal-content {
-    padding: 0 $gutter $gutter;
-    width: 40%;
+    padding: 0 $gutter $gutter ($gutter * 2);
+    width: 50%;
   }
 }
