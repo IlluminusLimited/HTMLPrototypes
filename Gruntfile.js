@@ -186,9 +186,9 @@ module.exports = function(grunt) {
           open: 'local',
           notify: false,
           ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
+            clicks: false,
+            forms: false,
+            scroll: false
           }
         }
       }

@@ -9,7 +9,8 @@
 
   .global-search-form {
     margin: 0 auto $gutter;
+    padding: $gutter;
     width: 80%;
-    max-width: 450px;
+    max-width: 480px;
   }
 }
