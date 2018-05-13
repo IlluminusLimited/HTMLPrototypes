@@ -51,6 +51,8 @@
     background: linear-gradient(90deg, transparent, rgba($white, 0.75) 70%, $white);
     content: "";
   }
+
+  a & { color: $copy-dark; }
 }
 
 .pin-round {
@@ -65,4 +67,12 @@
   }
 
   .pin-list-title { @include sr-only; }
+}
+
+body:not(.is-touch) {
+  a {
+    &.pin-list-item:hover {
+      box-shadow: $box-shadow-hover;
+    }
+  }
 }
