@@ -8,6 +8,20 @@
     padding-bottom: 100%;
     content: "";
   }
+
+  &[data-count]::before {
+    display: block;
+    position: absolute;
+    right: 0.5em;
+    bottom: 1.2em;
+    z-index: 1;
+    border: 1px solid $gray-dark;
+    border-radius: 50px;
+    background-color: rgba($white, 0.85);
+    padding: 0.25em 0.375em 0.25em 0.4375em;
+    line-height: 1;
+    content: attr(data-count);
+  }
 }
 
 .pin-list-img {
@@ -25,12 +39,30 @@
   left: 0;
   background-color: rgba($white, 0.85);
   padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(100% - 7ch);
+    background: linear-gradient(90deg, transparent, rgba($white, 0.75) 70%, $white);
+    content: "";
+  }
 }
 
 .pin-round {
   border: 3px solid $yellow;
   border-radius: 50%;
   overflow: hidden;
+
+  &[data-count]::before {
+    right: 50%;
+    bottom: 50%;
+    transform: translateY(50%) translateX(50%);
+  }
 
   .pin-list-title { @include sr-only; }
 }
