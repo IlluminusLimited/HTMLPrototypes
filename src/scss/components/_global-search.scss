@@ -13,12 +13,9 @@
   [type="submit"],
   [type="search"] {
     border: 1px solid $gray-light;
-    border-radius: 0;
-    box-shadow: none;
     background: $white;
     width: auto;
     height: 2.225em;
-    appearance: none;
 
     &:focus {
       outline: none;
