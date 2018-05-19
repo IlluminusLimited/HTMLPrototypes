@@ -6,7 +6,7 @@
   top: $gutter;
   right: $gutter;
   left: $gutter;
-  z-index: 5;
+  z-index: $z-modal;
   background-color: $white;
   max-height: calc(100vh - 50px);
   overflow: auto;
