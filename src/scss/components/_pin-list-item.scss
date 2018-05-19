@@ -24,7 +24,7 @@
   }
 
   &.add-new {
-    background-color: $gray-dark;
+    background-color: rgba($gray-dark, 0.85);
   }
 }
 
@@ -102,7 +102,7 @@
 body:not(.is-touch) {
   a {
     &.pin-list-item:hover {
-      box-shadow: $box-shadow-hover;
+      box-shadow: $box-shadow;
     }
   }
 }
