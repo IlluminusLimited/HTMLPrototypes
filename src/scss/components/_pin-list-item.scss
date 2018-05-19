@@ -26,6 +26,8 @@
   &.add-new {
     background-color: rgba($gray-dark, 0.85);
   }
+
+  &:active { color: $copy-dark; }
 }
 
 .pin-list-img {
