@@ -8,7 +8,7 @@ function openModal(toggle){
 function closeModal(){
   document.querySelector('html').classList.remove('no-scroll');
   document.querySelector(".modal-overlay").classList.remove("active");
-  document.querySelectorAll('.pin-modal.active').forEach(function(modal){
+  document.querySelectorAll('.pin-modal.active, .form-modal.active').forEach(function(modal){
     modal.classList.remove('active');
   });
 }
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
   // open modal on toggler click
-  document.querySelectorAll('.pin-modal-toggle').forEach(function(toggle){
+  document.querySelectorAll('.modal-toggle').forEach(function(toggle){
     toggle.addEventListener('click', function(){
       openModal(toggle);
     });

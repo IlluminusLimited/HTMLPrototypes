@@ -1,9 +1,4 @@
----
-title: form samples
----
-
-<div style="background: purple;">
-
+<div id="{{form-id}}" class="form-modal" aria-hidden="true" aria-labelledby="title-{{form-id}}" role="dialog">
   <form action="#">
     <div class="form-group">
       <label for="email">email</label>
@@ -32,5 +27,7 @@ title: form samples
       <input type="reset"  id="cancel" name="visibilty" value="cancel" />
     </div>
   </form>
-
+  <button class="pin-modal-dismiss">
+    {{> svg-close }}
+  </button>
 </div>

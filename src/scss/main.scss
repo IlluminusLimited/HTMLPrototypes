@@ -55,11 +55,16 @@
 @import 'components/pin-collection';
 @import 'components/pin-list-item';
 @import 'components/pin-stack';
+
+@import 'components/modal-overlay';
+
 @import 'components/pin-modal';
 @import 'components/pin-modal-img';
 @import 'components/pin-modal-viewer';
 @import 'components/pin-modal-content';
 @import 'components/pin-modal-thumbs';
+
+@import 'components/form-modal';
 
 // Utilities
 //     utilities and helper classes with ability to override anything which

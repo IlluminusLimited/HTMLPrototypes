@@ -102,10 +102,13 @@ pin stacks can be used to show multiple images in a single "thumbnail"
     <div class="pin-list-title">Link to Set</div>
   </a>
 
-  <a href="/forms.html" class="pin-list-item add-new">
-    {{> svg-add class="white pin-list-img" }}
-    <div class="pin-list-title">add new collection</div>
-  </a>
+  <div>
+    <div class="pin-list-item add-new form-modal-toggle modal-toggle" data-modal="form-modal-01">
+      {{> svg-add class="white pin-list-img" }}
+      <div class="pin-list-title">add new collection</div>
+    </div>
+    {{> sample-form form-id="form-modal-01"}}
+  </div>
 </div>
 
 
